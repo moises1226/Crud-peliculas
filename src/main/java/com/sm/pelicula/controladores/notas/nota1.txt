@@ -1,0 +1,37 @@
+@RequestBody:
+@RequestBody es una anotación en Spring Boot que se utiliza para extraer y convertir el
+cuerpo de una solicitud HTTP en un objeto Java. Específicamente, se encarga de deserializar
+los datos del cuerpo de la solicitud (generalmente en formato JSON, XML, o cualquier otro
+formato soportado) y vincularlos a un parámetro del método en un controlador.
+
+------------------------------
+
+ResponseEntity<>:
+ResponseEntity<T> es una clase en Spring que representa una respuesta HTTP completa,
+que incluye tanto el cuerpo de la respuesta como los encabezados y el código de estado HTTP.
+Se utiliza en los controladores de Spring para devolver respuestas personalizadas y más
+detalladas a las solicitudes HTTP.
+
+--------------------------
+HttpStatus.CREATED:
+es una constante en la enumeración (enum) HttpStatus de Spring Framework,
+que representa el código de estado HTTP 201 Created.
+
+Funcionalidad de HttpStatus.CREATED
+Código de Estado HTTP: 201 Created
+
+Este código indica que la solicitud se ha completado con éxito y que se ha
+creado un nuevo recurso como resultado.
+Uso Típico:
+
+Es comúnmente utilizado en respuestas a solicitudes HTTP POST o PUT cuando se
+crea un nuevo recurso en el servidor. Por ejemplo, si una API permite la creación de
+una nueva entidad, al recibir los datos y crear exitosamente el recurso en la base de datos,
+el servidor debería responder con 201 Created.
+Especificaciones del Protocolo HTTP:
+
+Según la especificación HTTP/1.1, cuando un servidor responde con 201 Created,
+generalmente incluye en la respuesta una cabecera Location que indica la URL del
+nuevo recurso creado.
+
+-------------------------------------
